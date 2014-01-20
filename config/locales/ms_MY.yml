@@ -244,9 +244,17 @@ ms_MY:
   vehicle_manufacturers:
     title: Pengeluar Kenderaan
     name: Nama
-    country: Negara  
-  #localization for FORMS LABEL in activemodel (to use in haml)
-  #http://stackoverflow.com/questions/4736396/how-do-you-localize-the-field-names-in-activemodel-error-messages    (solution #3)     
+    country: Negara
+  fuel_units:
+    title: "Pengeluaran / Penggunaan"
+    unit_id: Unit
+    dept_account: Akaun Depot
+    report_date: Tarikh
+    edit: Sunting Pengeluaran / Penggunaan
+    new: Pengeluaran / Penggunaan Baru
+  fuel_issueds:
+    add_details: Add Details
+  #localization for FORMS LABEL in activemodel (to use in haml)  #http://stackoverflow.com/questions/4736396/how-do-you-localize-the-field-names-in-activemodel-error-messages    (solution #3)     
   helpers:
     links:
       new: Cipta
@@ -338,6 +346,10 @@ ms_MY:
         shortname: Nama Ringkas
         name: Nama
         parent_id: Unit Induk
+      fuel_unit:
+        unit_id: Unit
+        dept_account: Akaun Depot
+        report_date: Tarikh  
     prompt:   
       select_manufacturer: Pilih Pengeluar
       select_category: Pilih Kategori
@@ -356,6 +368,7 @@ ms_MY:
       select_company: Pilih Kontraktor
       select_issuer: Pilih Pengeluar
       select_contract_type: Pilih Jenis Kontrak
+      select_depot_account: Pilih Akaun Depot
       
             
         

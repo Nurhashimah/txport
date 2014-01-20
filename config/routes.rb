@@ -1,4 +1,8 @@
 Txport::Application.routes.draw do
+  resources :fuel_issueds
+
+  resources :fuel_units
+
   resources :fuel_types
 
   resources :fuel_tanks

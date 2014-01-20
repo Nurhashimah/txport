@@ -266,6 +266,15 @@ en:
     title: Vehicle Manufacturers
     name: Name
     country: Country
+  fuel_units:
+    title: "Issueds / Usages"
+    unit_id: Unit
+    dept_account: Depot Account
+    report_date: Date
+    new: "New Issued / Usage"
+    edit: "Edit Issued / Usage"
+  fuel_issueds:
+    add_details: Add Details
   #localization for forms label in activemodel (to use in haml)  --> refer helpers --> label
   #http://stackoverflow.com/questions/4736396/how-do-you-localize-the-field-names-in-activemodel-error-messages    (solution #3)     
   helpers:
@@ -357,6 +366,10 @@ en:
         shortname: Short Name
         name: Name
         parent_id: Parent Unit
+      fuel_unit:
+        unit_id: Unit
+        dept_account: Depot Account
+        report_date: Date  
     prompt:
       select_manufacturer: Select Manufacturer
       select_category: Select Category
@@ -374,3 +387,4 @@ en:
       select_unit: Select Unit
       select_company: Select Contractor
       select_issuer: Select Issuer
+      select_account_depot: Select Account Depot

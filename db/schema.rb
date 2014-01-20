@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140119101557) do
+ActiveRecord::Schema.define(version: 20140120082358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,15 @@ ActiveRecord::Schema.define(version: 20140119101557) do
     t.datetime "updated_at"
   end
 
+  create_table "fuel_issueds", force: true do |t|
+    t.integer  "fuel_unit_id"
+    t.integer  "fuel_type_id"
+    t.string   "description"
+    t.decimal  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "fuel_tanks", force: true do |t|
     t.integer  "unit_id"
     t.string   "locations"
@@ -61,6 +70,14 @@ ActiveRecord::Schema.define(version: 20140119101557) do
   create_table "fuel_types", force: true do |t|
     t.string   "shortname"
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fuel_units", force: true do |t|
+    t.integer  "unit_id"
+    t.integer  "dept_account"
+    t.date     "report_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

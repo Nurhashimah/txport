@@ -44,7 +44,7 @@
           %li= link_to content_tag(:i, "", :class => "icon-numb") + (t 'menu.depot'), units_path(:id=>1)
           %li= link_to content_tag(:i, "", :class => "icon-numb") + (t 'fuel_tanks.title'), fuel_tanks_path
           %li= link_to content_tag(:i, "", :class => "icon-numb") + "Supplied/Received", '#'
-          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Issued/Usage", '#'
+          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Issued/Usage", fuel_units_path
           %li= link_to content_tag(:i, "", :class => "icon-numb") + (t 'fuel_types.title'), fuel_types_path
           
     %li.icon.icon-left
