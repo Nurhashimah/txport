@@ -1,0 +1,29 @@
+- provide(:title, 'Staffs')
+- model_class = Staff
+.page-header
+  %h1= t 'fuel_units.title', :default => model_class.model_name.human.pluralize
+  
+  
+.navbar.navbar-inverse
+  .navbar-inner
+    %ul.nav
+      %li= link_to content_tag(:li, fa_icon("truck", text: (t 'actions.new'))), new_fuel_unit_path
+    %ul.nav.pull-right
+      %li#toga= link_to content_tag(:li, fa_icon("search", text: (t 'actions.search'))), "#"
+      %li= link_to content_tag(:li, fa_icon("print", text: (t 'actions.print'))), "#"
+      
+      
+%table.table.table-condensed.table-hover
+  %thead
+    %tr
+      %th= t 'fuel_units.unit_id'
+      %th= t 'fuel_units.dept_account'
+      %th= t 'fuel_units.report_date'
+      %th 
+  %tbody
+    - @fuel_units.each do |fuel_unit|
+      %tr
+        %td= fuel_unit.fuel_receiver.name
+        %td= fuel_unit.depot_account.name
+        %td= fuel_unit.report_date
+        = render :partial => 'action_menu', :locals => { :fuel_unit => fuel_unit }

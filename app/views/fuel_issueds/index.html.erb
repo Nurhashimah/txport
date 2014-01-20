@@ -1,0 +1,33 @@
+<h1>Listing fuel_issueds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fuel unit</th>
+      <th>Fuel type</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fuel_issueds.each do |fuel_issued| %>
+      <tr>
+        <td><%= fuel_issued.fuel_unit_id %></td>
+        <td><%= fuel_issued.fuel_type_id %></td>
+        <td><%= fuel_issued.description %></td>
+        <td><%= fuel_issued.quantity %></td>
+        <td><%= link_to 'Show', fuel_issued %></td>
+        <td><%= link_to 'Edit', edit_fuel_issued_path(fuel_issued) %></td>
+        <td><%= link_to 'Destroy', fuel_issued, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fuel issued', new_fuel_issued_path %>

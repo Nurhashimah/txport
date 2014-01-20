@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fuel unit:</strong>
+  <%= @fuel_issued.fuel_unit_id %>
+</p>
+
+<p>
+  <strong>Fuel type:</strong>
+  <%= @fuel_issued.fuel_type_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fuel_issued.description %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @fuel_issued.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_fuel_issued_path(@fuel_issued) %> |
+<%= link_to 'Back', fuel_issueds_path %>

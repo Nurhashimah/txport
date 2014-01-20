@@ -1,0 +1,5 @@
+%fieldset
+  .form-inline{role: "form"}
+    = f.collection_select :fuel_type_id, FuelType.all, :id, :name, :include_blank => (t 'helpers.prompt.select_fuel_type'), :html_options => {:class => 'selectpicker'}
+    = f.text_field :description, :class => 'text_field input-small', placeholder: "Measurement Type"
+    = f.text_field :quantity, :class => 'text_field input-small', placeholder: "Value"
